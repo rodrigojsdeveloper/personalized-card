@@ -45,6 +45,10 @@ const ContainerGlobal = styled.div`
   display: flex;
   flex-direction: row;
   align-items: start;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const ContentGlobal = styled.div`
@@ -53,8 +57,34 @@ const ContentGlobal = styled.div`
 
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
+  padding-right: 40px;
   background-color: var(--white-color-20);
+
+  & > .waveMobile {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: unset;
+    flex-direction: column-reverse;
+
+    padding: 35px;
+
+    & > .waveDesktop {
+      display: none;
+    }
+
+    & > .waveMobile {
+      margin-top: 100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 export { ContainerGlobal, ContentGlobal };

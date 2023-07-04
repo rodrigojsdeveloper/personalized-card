@@ -4,7 +4,12 @@ const ContainerStyle = styled.div`
   width: 100%;
   max-width: 632px;
 
-  padding: 40px 0 53px 80px;
+  padding: 40px 40px 53px 80px;
+
+  
+  @media (max-width: 768px) {
+    padding: 40px 20px 20px 20px;
+  }
 `;
 
 const ContentStyle = styled.div`

@@ -14,6 +14,7 @@ const Container = styled.button<IButtonStyled>`
   line-height: 21.94px;
 
   border-radius: 4px;
+  margin-right: 5px;
 
   ${({ color }) => {
     switch (color) {

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface ICardStyle {
   changeColor:
@@ -9,8 +9,32 @@ interface ICardStyle {
     | "var(--dark-blue-linear-gradient)";
 }
 
+const cardAnimationHorizontal = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
+const cardAnimationVertical = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
 const ContainerHorizontal = styled.div<ICardStyle>`
-  width: 650px;
+  width: 600px;
   height: 350px;
 
   display: flex;
@@ -22,6 +46,7 @@ const ContainerHorizontal = styled.div<ICardStyle>`
   background: ${(props) => props.changeColor};
 
   padding: 30px 38px;
+  animation: ${cardAnimationHorizontal} 1s ease-in-out alternate;
 
   & > div:nth-child(1) {
     width: 100%;
@@ -44,11 +69,32 @@ const ContainerHorizontal = styled.div<ICardStyle>`
       margin-left: 32px;
     }
   }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+    padding: 20px 28px;
+
+    & > div {
+      & > img {
+        width: 70px;
+        height: 70px;
+      }
+
+      p {
+        font-size: 16px !important;
+      }
+    }
+  }
 `;
 
 const ContainerVertical = styled.div<ICardStyle>`
   width: 350px;
-  height: 650px;
+  height: 600px;
 
   display: flex;
   flex-direction: column;
@@ -59,6 +105,7 @@ const ContainerVertical = styled.div<ICardStyle>`
   background: ${(props) => props.changeColor};
 
   padding: 25px 30px;
+  animation: ${cardAnimationVertical} 1s ease-in-out alternate;
 
   & > div:nth-child(1) {
     width: 100%;
@@ -79,6 +126,25 @@ const ContainerVertical = styled.div<ICardStyle>`
 
       color: var(--white-color);
       margin-bottom: 128px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: 500px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 28px;
+
+    & > div {
+      & > img {
+        width: 70px;
+        height: 70px;
+      }
+
+      p {
+        font-size: 16px !important;
+      }
     }
   }
 `;

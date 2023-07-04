@@ -1,7 +1,8 @@
 import { ContainerGlobal, ContentGlobal } from "./styles/global";
 import { Container } from "./components/Container";
+import waveMobile from "./assets/wave_mobile.svg";
 import { Card } from "./components/Card";
-import waves from "./assets/waves.svg";
+import wave from "./assets/waves.svg";
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       <Container />
 
       <ContentGlobal>
-        <img src={waves} alt="waves" />
+        <img src={wave} alt="wave" className="waveDesktop" />
+        <img src={waveMobile} alt="wave" className="waveMobile" />
 
         <Card />
       </ContentGlobal>
