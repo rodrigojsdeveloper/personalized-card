@@ -1,10 +1,9 @@
-import { Button } from "./components/Button";
-import { Logos } from "./components/Logos";
+import { ContainerButtons } from "./components/ContainerButtons";
 
 const App = () => {
   return (
     <>
-      <Logos />
+      <ContainerButtons />
     </>
   );
 };
