@@ -1,14 +1,9 @@
-import { Color } from "./components/Color";
-import { Input } from "./components/Input";
+import { Colors } from "./components/Colors";
 
 const App = () => {
   return (
     <>
-      <Color background="purple" />
-      <Color background="blue" />
-      <Color background="black" />
-      <Color background="lilac" />
-      <Color background="dark blue" />
+      <Colors />
     </>
   );
 };

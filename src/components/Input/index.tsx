@@ -1,13 +1,9 @@
 import { Container, Label } from "./style";
 
-interface InputProps {
-  label: string;
-}
-
-const Input = ({ label }: InputProps) => {
+const Input = () => {
   return (
     <Container>
-      <Label>{label}</Label>
+      <Label>Nome completo</Label>
 
       <input />
     </Container>
