@@ -1,9 +1,10 @@
-import { Colors } from "./components/Colors";
+import { Button } from "./components/Button";
 
 const App = () => {
   return (
     <>
-      <Colors />
+      <Button color="white">Ho</Button>
+      <Button color="purple">Ver</Button>
     </>
   );
 };
