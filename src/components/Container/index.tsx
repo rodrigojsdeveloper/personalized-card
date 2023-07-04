@@ -1,5 +1,5 @@
 import { ContainerButtons } from "../ContainerButtons";
-import { ContainerStyle, ContentStyle } from "./style";
+import { ContainerButtonStyle, ContainerStyle, ContentStyle } from "./style";
 import { Button } from "../Button";
 import { Colors } from "../Colors";
 import { Input } from "../Input";
@@ -41,7 +41,9 @@ const Container = () => {
       <Colors />
       <ContainerButtons />
       <Logos />
-      <Button color="purple">Próximo</Button>
+      <ContainerButtonStyle>
+        <Button color="purple">Próximo</Button>
+      </ContainerButtonStyle>
     </ContainerStyle>
   );
 };

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export default createGlobalStyle`
 
@@ -14,6 +14,7 @@ export default createGlobalStyle`
 	:root {
     --white-color: #FFFFFF;
     --white-color-10: #E7E8EA;
+		--white-color-20: rgb(242, 243, 245);
 
     --gray-color: #656B77;
 
@@ -39,3 +40,21 @@ export default createGlobalStyle`
 		text-decoration: none;
 	}
 `;
+
+const ContainerGlobal = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+`;
+
+const ContentGlobal = styled.div`
+  width: 100%;
+  max-width: 930px;
+
+  display: flex;
+  flex-direction: row;
+
+  background-color: var(--white-color-20);
+`;
+
+export { ContainerGlobal, ContentGlobal };

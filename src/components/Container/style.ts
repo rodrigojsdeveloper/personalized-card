@@ -2,13 +2,9 @@ import styled from "styled-components";
 
 const ContainerStyle = styled.div`
   width: 100%;
-  max-width: 432px;
+  max-width: 632px;
 
-  padding: 40px 0 64px 80px;
-
-  & > button {
-    float: right;
-  }
+  padding: 40px 0 53px 80px;
 `;
 
 const ContentStyle = styled.div`
@@ -37,4 +33,13 @@ const ContentStyle = styled.div`
   }
 `;
 
-export { ContainerStyle, ContentStyle };
+const ContainerButtonStyle = styled.div`
+  width: 100%;
+  max-width: 432px;
+
+  & > button {
+    float: right;
+  }
+`;
+
+export { ContainerStyle, ContentStyle, ContainerButtonStyle };
