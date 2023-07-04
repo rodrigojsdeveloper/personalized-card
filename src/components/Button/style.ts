@@ -22,8 +22,6 @@ const Container = styled.button<IButtonStyled>`
           color: var(--purple-color);
           background-color: var(--white-color);
           border: 2px solid var(--purple-color);
-
-          margin-right: 16px;
         `;
 
       case "purple":
