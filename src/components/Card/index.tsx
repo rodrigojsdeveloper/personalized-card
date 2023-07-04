@@ -6,10 +6,11 @@ import cardFlag from "../../assets/card_flag.svg";
 import { useContext } from "react";
 
 const Card = () => {
-  const { changeLogo, changeName, changeSize } = useContext(CardContext);
+  const { changeLogo, changeName, changeSize, changeColor } =
+    useContext(CardContext);
 
   return changeSize ? (
-    <ContainerVertical>
+    <ContainerVertical changeColor={changeColor}>
       <div>
         <img src={cardFlag} alt="Card Flag" />
       </div>
@@ -21,7 +22,7 @@ const Card = () => {
       </div>
     </ContainerVertical>
   ) : (
-    <ContainerHorizontal>
+    <ContainerHorizontal changeColor={changeColor}>
       <div>
         <img src={cardFlag} alt="Card Flag" />
       </div>

@@ -7,6 +7,21 @@ interface ICardContextData {
   setChangeName: React.Dispatch<React.SetStateAction<string>>;
   changeSize: boolean;
   setChangeSize: React.Dispatch<React.SetStateAction<boolean>>;
+  changeColor:
+    | "var(--purple-linear-gradient)"
+    | "var(--blue-linear-gradient)"
+    | "var(--black-linear-gradient)"
+    | "var(--lilac-linear-gradient)"
+    | "var(--dark-blue-linear-gradient)";
+  setChangeColor: React.Dispatch<
+    React.SetStateAction<
+      | "var(--purple-linear-gradient)"
+      | "var(--blue-linear-gradient)"
+      | "var(--black-linear-gradient)"
+      | "var(--lilac-linear-gradient)"
+      | "var(--dark-blue-linear-gradient)"
+    >
+  >;
 }
 
 interface ICardContextProvider {
@@ -22,6 +37,14 @@ export const CardContextProvider = ({ children }: ICardContextProvider) => {
 
   const [changeSize, setChangeSize] = useState<boolean>(false);
 
+  const [changeColor, setChangeColor] = useState<
+    | "var(--purple-linear-gradient)"
+    | "var(--blue-linear-gradient)"
+    | "var(--black-linear-gradient)"
+    | "var(--lilac-linear-gradient)"
+    | "var(--dark-blue-linear-gradient)"
+  >("var(--purple-linear-gradient)");
+
   return (
     <CardContext.Provider
       value={{
@@ -31,6 +54,8 @@ export const CardContextProvider = ({ children }: ICardContextProvider) => {
         setChangeName,
         changeSize,
         setChangeSize,
+        changeColor,
+        setChangeColor,
       }}
     >
       {children}

@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
-const ContainerHorizontal = styled.div`
+interface ICardStyle {
+  changeColor:
+    | "var(--purple-linear-gradient)"
+    | "var(--blue-linear-gradient)"
+    | "var(--black-linear-gradient)"
+    | "var(--lilac-linear-gradient)"
+    | "var(--dark-blue-linear-gradient)";
+}
+
+const ContainerHorizontal = styled.div<ICardStyle>`
   width: 650px;
   height: 350px;
 
@@ -10,7 +19,7 @@ const ContainerHorizontal = styled.div`
 
   border-radius: 32px;
   box-shadow: 0px 32px 64px 0px #00000040;
-  background: var(--purple-linear-gradient);
+  background: ${(props) => props.changeColor};
 
   padding: 30px 38px;
 
@@ -37,7 +46,7 @@ const ContainerHorizontal = styled.div`
   }
 `;
 
-const ContainerVertical = styled.div`
+const ContainerVertical = styled.div<ICardStyle>`
   width: 350px;
   height: 650px;
 
@@ -47,7 +56,7 @@ const ContainerVertical = styled.div`
 
   border-radius: 32px;
   box-shadow: 0px 32px 64px 0px #00000040;
-  background: var(--purple-linear-gradient);
+  background: ${(props) => props.changeColor};
 
   padding: 25px 30px;
 
