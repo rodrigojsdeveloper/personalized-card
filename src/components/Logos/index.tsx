@@ -1,7 +1,11 @@
+import { CardContext } from "../../context/CardContext";
 import { Container, Content } from "./style";
 import { Label } from "../Input/style";
+import { useContext } from "react";
 
 const Logos = () => {
+  const { setChangeLogo } = useContext(CardContext);
+
   return (
     <Container>
       <Label>Logo da nubank</Label>
@@ -13,6 +17,7 @@ const Logos = () => {
           viewBox="0 0 123 68"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={() => setChangeLogo(false)}
         >
           <g clip-path="url(#clip0_8_773)">
             <path
@@ -30,13 +35,14 @@ const Logos = () => {
             </clipPath>
           </defs>
         </svg>
-        
+
         <svg
           width="123"
           height="68"
           viewBox="0 0 123 68"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={() => setChangeLogo(true)}
         >
           <g clip-path="url(#clip0_8_776)">
             <path
