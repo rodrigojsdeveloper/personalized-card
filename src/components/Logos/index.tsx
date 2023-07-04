@@ -30,6 +30,7 @@ const Logos = () => {
             </clipPath>
           </defs>
         </svg>
+        
         <svg
           width="123"
           height="68"
