@@ -9,6 +9,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: start;
 
+  margin-bottom: 24px;
+
   & > input {
     width: 100%;
     height: 48px;
@@ -17,10 +19,11 @@ const Container = styled.div`
     border-radius: 4px;
     background-color: var(--white-color-10);
 
-    padding: 10px;
+    padding: 10px 15px;
 
     &:hover, &:focus {
-      border: 2px solid var(--gray-color);
+      border: 1px solid var(--gray-color);
+      background-color: var(--white-color);
     }
   }
 `

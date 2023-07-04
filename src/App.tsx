@@ -1,9 +1,9 @@
-import { ContainerButtons } from "./components/ContainerButtons";
+import { Container } from "./components/Container";
 
 const App = () => {
   return (
     <>
-      <ContainerButtons />
+      <Container />
     </>
   );
 };
