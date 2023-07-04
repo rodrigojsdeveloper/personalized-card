@@ -1,10 +1,10 @@
 import { Button } from "./components/Button";
+import { Logos } from "./components/Logos";
 
 const App = () => {
   return (
     <>
-      <Button color="white">Ho</Button>
-      <Button color="purple">Ver</Button>
+      <Logos />
     </>
   );
 };
