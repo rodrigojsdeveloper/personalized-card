@@ -3,7 +3,7 @@ import { Container } from "./style";
 interface IButton {
   color: "white" | "purple";
   children: React.ReactNode;
-  onClick: React.MouseEventHandler<HTMLElement>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 const Button = ({ color, children, onClick }: IButton) => {
