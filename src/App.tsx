@@ -12,7 +12,6 @@ const App = () => {
       <ContentGlobal>
         <img src={wave} alt="wave" className="waveDesktop" />
         <img src={waveMobile} alt="wave" className="waveMobile" />
-
         <Card />
       </ContentGlobal>
     </ContainerGlobal>

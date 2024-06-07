@@ -5,10 +5,10 @@ const ContainerStyle = styled.div`
   max-width: 632px;
 
   padding: 40px 40px 53px 80px;
+  margin: auto;
 
-  
   @media (max-width: 768px) {
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px 80px;
   }
 `;
 
@@ -24,7 +24,7 @@ const ContentStyle = styled.div`
     line-height: 39px;
 
     color: var(--purple-color);
-    margin-top: 72px;
+    margin-top: 62px;
   }
 
   & > hr {

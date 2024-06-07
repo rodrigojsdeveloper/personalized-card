@@ -9,8 +9,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-
-  margin-bottom: 80px;
 `
 
 const Content = styled.div`

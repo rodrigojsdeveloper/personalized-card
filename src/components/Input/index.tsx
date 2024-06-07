@@ -9,7 +9,7 @@ const Input = () => {
     <Container>
       <Label>Nome completo</Label>
 
-      <input onChange={(e) => setChangeName(e.target.value)} maxLength={26} />
+      <input onChange={(e) => setChangeName(e.target.value)} maxLength={24} />
     </Container>
   );
 };

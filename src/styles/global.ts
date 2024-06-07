@@ -42,18 +42,19 @@ export default createGlobalStyle`
 `;
 
 const ContainerGlobal = styled.div`
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: start;
 
-  @media (max-width: 1024px) {
-    flex-direction: column-reverse;
+  @media (max-width: 1504px) {
+    flex-direction: column;
   }
 `;
 
 const ContentGlobal = styled.div`
   width: 100%;
-  max-width: 930px;
+  height: 100vh;
 
   display: flex;
   flex-direction: row;
@@ -63,13 +64,18 @@ const ContentGlobal = styled.div`
   padding-right: 40px;
   background-color: var(--white-color-20);
 
+  & > .waveDesktop {
+    height: 100vh;
+  }
+
   & > .waveMobile {
     display: none;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1504px) {
     max-width: unset;
     flex-direction: column-reverse;
+    justify-content: center;
 
     padding: 35px;
 
